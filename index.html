@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>비밀번호 확인</title>
+</head>
+<body>
+  <h2>비밀번호를 입력하세요</h2>
+
+  <input id="pw" type="password">
+  <button onclick="check()">확인</button>
+
+  <p id="msg"></p>
+
+  <script>
+    const CORRECT_PASSWORD = "1234"; // ← 나중에 여기만 바꾸기
+
+    function check() {
+      const pw = document.getElementById("pw").value;
+      const msg = document.getElementById("msg");
+
+      if (pw === CORRECT_PASSWORD) {
+        msg.innerText = "정답입니다!";
+      } else {
+        msg.innerText = "오답입니다.";
+      }
+    }
+  </script>
+</body>
+</html>
+add index.html
